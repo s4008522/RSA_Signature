@@ -1,4 +1,3 @@
-keyGenerator.py             - Generate key pair and SHA-256 of the message.
-signatureVerification.py    - Validate the signature without private key, so it remains safe with the original author.
-
-These 2 are run seperately, I might do something with this repo but idk i'll see.
+keyGenerator.py             - Generate key pair, with the option to sign the message too
+signatureVerification.py    - Validate the signature
+TrustedThirdParty           - This is used with multiple keys or whatever

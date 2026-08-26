@@ -1,19 +1,20 @@
 print("\n---=== PROGRAM START ===---")
-print("\nThis program is a simple RSA signature verification.")
+print("\nsignatureVerification.py is a simple RSA signature verification program. \nIt will verify the digital signature of a message.") 
 
 # Inputs for the verification
-message = int(input("\nEnter the message decimal the person sent you:                          "))                 
-publicKeyPrimeFactorial = int(input("Enter the public key prime factorial the person sent you:               "))    
-publicKeyParameter = int(input("Enter the public key parameter the person sent you:                     "))         
-signature = int(input("Enter the signature the person sent you:                                "))                  
+m = int(input("\nEnter the message the person sent you:                                   "))                 
+e = int(input("Enter the public key parameter the person sent you:                      "))  
+n = int(input("Enter the public key prime factorial the person sent you:                "))           
+s = int(input("Enter the signature the person sent you:                                 "))                  
+
 
 # Perform RSA signature verification
-messageVerification = pow(signature, publicKeyParameter, publicKeyPrimeFactorial)
-print(f"\nMessage verification: {messageVerification}")
-print(f"Message:              {message}")
+mVerification = pow(s, e, n)
+print(f"\nMessage verification:   {mVerification}")
+print(f"Message:                {m}")
 
 # Check if the verification is successful
-if messageVerification == message:
+if mVerification == m:
     print("\nMessage verification is successful!")
 else:
     print("\nMessage verification is unsuccessful!")
